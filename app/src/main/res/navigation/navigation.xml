@@ -31,4 +31,8 @@
         android:name="com.arfan.diaryku.ui.HistoriFragment"
         android:label="@string/histori"
         tools:layout="@layout/fragment_histori" />
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="com.arfan.diaryku.ui.NoteFragment"
+        android:label="NoteFragment" />
 </navigation>
