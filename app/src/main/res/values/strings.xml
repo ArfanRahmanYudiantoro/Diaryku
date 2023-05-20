@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Diaryku</string>
+    <string name="Catatan">Diary</string>
+    <string name="Tambah_catatan">Tambah Catatan</string>
+    <string name="judul">ydytdhygfjhgtddjgjkhgytdtsrdfhgjgufyfy</string>
+    <string name="Keterangan">Keterangan</string>
+    <string name="judul1">Judul</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="histori">Histori</string>
+    <string name="judul_tambah">Tambah Catatan</string>
+    <string name="belum_ada_data">Belum ada data</string>
+
+</resources>
