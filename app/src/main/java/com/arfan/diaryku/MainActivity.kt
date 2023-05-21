@@ -2,9 +2,11 @@ package com.arfan.diaryku
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.arfan.diaryku.histori.HistoriFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +20,11 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this, navController)
     }override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp()
+    }
+    private fun getData(): List<HistoriFragment> {
+        return listOf(
+
+        )
     }
 
 }

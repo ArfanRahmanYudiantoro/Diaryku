@@ -8,8 +8,8 @@ import androidx.room.Query
 @Dao
 interface DataDao {
     @Insert
-    fun insert(data: Data)
+    fun insert(data: DataEntity)
 
     @Query("SELECT * FROM data ORDER BY id DESC")
-    fun getData(): LiveData<List<Data>>
+    fun getData(): LiveData<List<DataEntity>>
 }

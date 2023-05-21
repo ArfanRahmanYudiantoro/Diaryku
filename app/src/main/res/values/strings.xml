@@ -13,6 +13,8 @@
         sarana untuk mencatat momen penting, refleksi diri, dan
         mengungkapkan emosi secara pribadi. </string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="jdl_x">Judul: %1s \nKeterangan: %2s</string>
+
 
 
 </resources>
