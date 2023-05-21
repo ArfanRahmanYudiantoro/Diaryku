@@ -10,6 +10,6 @@ interface DataDao {
     @Insert
     fun insert(data: Data)
 
-    @Query("SELECT * FROM data ORDER BY id DESC LIMIT 1")
-    fun getData(): LiveData<Data?>
+    @Query("SELECT * FROM data ORDER BY id DESC")
+    fun getData(): LiveData<List<Data>>
 }

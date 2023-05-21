@@ -51,10 +51,6 @@ class TambahFragment: Fragment() {
                 R.id.action_tambahFragment_to_historiFragment
             )
         }
-        viewModel.data.observe(viewLifecycleOwner, {
-            if (it == null) return@observe
-            Log.d("TambahFragment", "Data tersimpan. ID = ${it.id}")
-        })
 
     }
 
@@ -74,17 +70,28 @@ class TambahFragment: Fragment() {
         Toast.makeText(requireContext(), "Berhasil ditambahkan", Toast.LENGTH_LONG).show()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater)
-    { super.onCreateOptionsMenu(menu, inflater)
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.options_menu, menu)
     }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean { if (item.itemId == R.id.menu_about) {
 
-        findNavController().navigate( R.id.action_tambahFragment_to_aboutFragment3)
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_about) {
 
-        return true
+            findNavController().navigate(R.id.action_tambahFragment_to_aboutFragment3)
+
+            return true
+        }
+        when (item.itemId) {
+            R.id.menu_histori -> {
+                findNavController().navigate(R.id.action_tambahFragment_to_historiFragment)
+                return true
+            }
+
+            R.id.menu_about -> {
+            }
+        }
+        return super.onOptionsItemSelected(item)
+
     }
-        return super.onOptionsItemSelected(item) }
-
-
 }

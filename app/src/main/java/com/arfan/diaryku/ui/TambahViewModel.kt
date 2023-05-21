@@ -14,8 +14,6 @@ import kotlinx.coroutines.withContext
 class TambahViewModel(private val db: DataDao): ViewModel() {
     private val  hasilData = MutableLiveData<HasilData?>()
     private val Data =  MutableLiveData<Data?>()
-    val data = db.getData()
-
     fun setData(judul: String, keterangan: String){
         val data = Data(
             judul = judul,
