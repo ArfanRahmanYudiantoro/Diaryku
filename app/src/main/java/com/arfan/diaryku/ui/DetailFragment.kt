@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.arfan.diaryku.databinding.FragmentHistoriBinding
+import com.arfan.diaryku.databinding.FragmentDetailBinding
 
-class HistoriFragment: Fragment() {
-    private lateinit var binding: FragmentHistoriBinding
+class DetailFragment: Fragment() {
+    private lateinit var binding: FragmentDetailBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

@@ -2,12 +2,17 @@
     <string name="app_name">Diaryku</string>
     <string name="Catatan">Diary</string>
     <string name="Tambah_catatan">Tambah Catatan</string>
-    <string name="judul">ydytdhygfjhgtddjgjkhgytdtsrdfhgjgufyfy</string>
+    <string name="judul">Judul</string>
     <string name="Keterangan">Keterangan</string>
     <string name="judul1">Judul</string>
     <string name="bagikan">Bagikan</string>
     <string name="histori">Histori</string>
     <string name="judul_tambah">Tambah Catatan</string>
     <string name="belum_ada_data">Belum ada data</string>
+    <string name="about">Diary adalah sebuah jurnal pribadi di mana seseorang dapat mencatat dan merekam pengalaman, perasaan, pemikiran, dan kejadian sehari-hari. Biasanya, diary digunakan sebagai
+        sarana untuk mencatat momen penting, refleksi diri, dan
+        mengungkapkan emosi secara pribadi. </string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+
 
 </resources>

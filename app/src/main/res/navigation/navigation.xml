@@ -12,11 +12,7 @@
         tools:layout="@layout/fragment_catatan" >
         <action
             android:id="@+id/action_catatanFragment_to_tambahFragment"
-            app:destination="@id/tambahFragment"/>
-        <action
-            android:id="@+id/action_"
-            app:destination="@id/historiFragment" />
-
+            app:destination="@id/tambahFragment" />
     </fragment>
     <fragment
         android:id="@+id/tambahFragment"
@@ -24,15 +20,20 @@
         tools:layout="@layout/fragment_tambah" >
         <action
             android:id="@+id/action_tambahFragment_to_historiFragment"
-            app:destination="@id/historiFragment" />
+            app:destination="@id/historiFragment"/>
+        <action
+            android:id="@+id/action_tambahFragment_to_aboutFragment3"
+            app:destination="@id/aboutFragment3" />
+
     </fragment>
     <fragment
         android:id="@+id/historiFragment"
-        android:name="com.arfan.diaryku.ui.HistoriFragment"
+        android:name="com.arfan.diaryku.histori.HistoriFragment"
         android:label="@string/histori"
         tools:layout="@layout/fragment_histori" />
     <fragment
-        android:id="@+id/noteFragment"
-        android:name="com.arfan.diaryku.ui.NoteFragment"
-        android:label="NoteFragment" />
+        android:id="@+id/aboutFragment3"
+        android:name="com.arfan.diaryku.ui.AboutFragment"
+        android:label="Tentang Aplikasi"
+        tools:layout="@layout/fragment_about"/>
 </navigation>
