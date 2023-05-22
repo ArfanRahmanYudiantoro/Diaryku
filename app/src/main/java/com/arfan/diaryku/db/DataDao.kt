@@ -12,4 +12,8 @@ interface DataDao {
 
     @Query("SELECT * FROM data ORDER BY id DESC")
     fun getData(): LiveData<List<DataEntity>>
+
+    @Query("DELETE FROM data")
+    fun clearData()
+
 }

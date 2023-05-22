@@ -1,8 +1,18 @@
 package com.arfan.diaryku.histori
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.arfan.diaryku.db.DataDao
-
-class HistoriViewModel(db: DataDao) : ViewModel() {
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+class HistoriViewModel(private val db: DataDao) : ViewModel() {
     val data = db.getData()
+    fun hapusData() = viewModelScope.launch {
+        withContext(Dispatchers.IO) {
+            db.clearData()
+        }
+    }
+
+
 }

@@ -1,5 +1,6 @@
 package com.arfan.diaryku.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -17,7 +18,7 @@ import com.arfan.diaryku.databinding.FragmentTambahBinding
 import com.arfan.diaryku.db.DataDb
 import com.arfan.diaryku.ui.tambah.TambahViewModelFactory
 
-class TambahFragment: Fragment() {
+class TambahFragment : Fragment() {
 
     private lateinit var binding: FragmentTambahBinding
     private val viewModel: TambahViewModel by lazy {
@@ -42,6 +43,7 @@ class TambahFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.shareButton.setOnClickListener { shareData() }
         binding.button2.setOnClickListener {
             tambah()
 
@@ -52,6 +54,23 @@ class TambahFragment: Fragment() {
             )
         }
 
+
+    }
+
+    private fun shareData() {
+        val message = getString(
+            R.string.bagikan_template, binding.judulInp.text, binding.keteranganIpnut.text
+        )
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.setType ("text/plain").putExtra(
+            Intent.EXTRA_TEXT, message
+        )
+        if (shareIntent.resolveActivity(
+                requireActivity().packageManager
+            ) != null
+        ) {
+            startActivity(shareIntent)
+        }
     }
 
     private fun tambah() {
@@ -60,7 +79,7 @@ class TambahFragment: Fragment() {
             Toast.makeText(requireContext(), "Judul Invalid", Toast.LENGTH_LONG).show()
             return
         }
-        val keterangan = binding.tinggiBadanInp.text.toString()
+        val keterangan = binding.keteranganIpnut.text.toString()
         if (keterangan.isEmpty()) {
             Toast.makeText(requireContext(), "Keterangan Invalid", Toast.LENGTH_LONG).show()
             return

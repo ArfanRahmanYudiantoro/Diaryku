@@ -42,7 +42,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/judul_hint">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tinggiBadan_inp"
+                android:id="@+id/keterangan_ipnut"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/Keterangan" />
@@ -68,5 +68,15 @@
         app:layout_constraintBottom_toBottomOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/bagikan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

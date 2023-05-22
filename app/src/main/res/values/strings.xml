@@ -14,7 +14,10 @@
         mengungkapkan emosi secara pribadi. </string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="jdl_x">Judul: %1s \nKeterangan: %2s</string>
-
-
+    <string name="hapus_histori">Hapus Histori</string>
+    <string name="konfirmasi_hapus">Hapus semua histori?</string>
+    <string name="hapus">Hapus</string>
+    <string name="batal">Batal</string>
+    <string name="bagikan_template">Judul: %1s \nKeterangan: %2s</string>
 
 </resources>
