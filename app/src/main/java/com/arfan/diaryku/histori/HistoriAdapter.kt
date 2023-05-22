@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.arfan.diaryku.R
 import com.arfan.diaryku.databinding.ItemHistoriBinding
+import com.arfan.diaryku.db.DataDao
 import com.arfan.diaryku.db.DataDb
 import com.arfan.diaryku.db.DataEntity
 import com.arfan.diaryku.model.setData
@@ -65,13 +66,13 @@ class HistoriAdapter(val fragment: Fragment) :
 
         private fun hapusData(id: Long, context: Context) {
             val db = DataDb.getInstance(context)
-            val GajiDao = db.dao
+            val DataDao = db.dao
             MaterialAlertDialogBuilder(context)
                 .setMessage(context.getString(R.string.konfirmasi_hapus_satu))
                 .setPositiveButton(context.getString(R.string.hapus)) { _, _ ->
                     CoroutineScope(Dispatchers.IO).launch {
                         withContext(Dispatchers.IO) {
-                            GajiDao.deleteHistory(id)
+                            DataDao.deleteHistory(id)
                         }
                     }
                 }
