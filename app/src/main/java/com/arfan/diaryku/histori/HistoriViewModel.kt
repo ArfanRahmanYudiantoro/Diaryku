@@ -8,11 +8,10 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 class HistoriViewModel(private val db: DataDao) : ViewModel() {
     val data = db.getData()
-    fun hapusData() = viewModelScope.launch {
+
+    fun hapusData(id: Long) = viewModelScope.launch {
         withContext(Dispatchers.IO) {
-            db.clearData()
+            db.deleteHistory(id)
         }
     }
-
-
 }

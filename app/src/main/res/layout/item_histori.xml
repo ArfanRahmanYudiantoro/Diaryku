@@ -5,16 +5,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <TextView
         android:id="@+id/jdlTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDelete"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Judul:aku adalah alpin yang menggalau  \nKeterangan:alpin medanq" />
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="@string/btnDlt"
+        app:layout_constraintBottom_toBottomOf="@+id/jdlTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/jdlTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
