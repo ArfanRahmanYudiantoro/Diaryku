@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_catatanFragment_to_tambahFragment"
             app:destination="@id/tambahFragment" />
+        <action
+            android:id="@+id/action_catatanFragment_to_artikelFragment"
+            app:destination="@id/artikelFragment" />
     </fragment>
     <fragment
         android:id="@+id/tambahFragment"
@@ -36,4 +39,8 @@
         android:name="com.arfan.diaryku.ui.AboutFragment"
         android:label="Tentang Aplikasi"
         tools:layout="@layout/fragment_about"/>
+    <fragment
+        android:id="@+id/artikelFragment"
+        android:name="com.arfan.diaryku.ui.tambah.artikel.ArtikelFragment"
+        android:label="ArtikelFragment" />
 </navigation>

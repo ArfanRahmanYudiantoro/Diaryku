@@ -27,6 +27,11 @@ class CatatanFragment:Fragment()  {
                 R.id.action_catatanFragment_to_tambahFragment
             )
         }
+        binding.btnArtikel.setOnClickListener{
+            findNavController().navigate(
+                R.id.action_catatanFragment_to_artikelFragment
+            )
+        }
 
 
     }

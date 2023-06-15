@@ -21,5 +21,6 @@
     <string name="bagikan_template">Judul: %1s \nKeterangan: %2s</string>
     <string name="konfirmasi_hapus_satu">Konfirmasi Hapus </string>
     <string name="btnDlt">Hapus</string>
+    <string name="diary">Artikel</string>
 
 </resources>
