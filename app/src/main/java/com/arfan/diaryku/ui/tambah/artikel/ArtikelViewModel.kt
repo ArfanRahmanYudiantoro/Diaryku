@@ -30,5 +30,6 @@ class ArtikelViewModel : ViewModel() {
     }
     fun getData(): LiveData<List<Artikel>> = data
     fun getStatus(): LiveData<ApiStatus> = status
+
 }
 
