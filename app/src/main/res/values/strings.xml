@@ -22,5 +22,6 @@
     <string name="konfirmasi_hapus_satu">Konfirmasi Hapus </string>
     <string name="btnDlt">Hapus</string>
     <string name="diary">Artikel</string>
+    <string name="koneksi">Koneksi Error</string>
 
 </resources>

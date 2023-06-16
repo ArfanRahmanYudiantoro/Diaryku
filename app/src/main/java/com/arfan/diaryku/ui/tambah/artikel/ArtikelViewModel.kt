@@ -21,10 +21,11 @@ class ArtikelViewModel : ViewModel() {
         viewModelScope.launch (Dispatchers.IO){
             status.postValue(ApiStatus.SUCCESS)
             try {
-                val result = ArtikelApi.service.getArtikel()
-                Log.d("MainViewModel", "Success: $result")
+                data.postValue(ArtikelApi.service.getArtikel())
+                status.postValue(ApiStatus.SUCCESS)
             } catch (e: Exception) {
                 Log.d("MainViewModel", "Failure: ${e.message}")
+                status.postValue(ApiStatus.FAILED)
             }
         }
     }
