@@ -45,6 +45,7 @@ class ArtikelFragment   : Fragment(){
         viewModel.getStatus().observe(viewLifecycleOwner) {
             updateProgress(it)
         }
+        viewModel.scheduleUpdater(requireActivity().application)
     }
     private fun updateProgress(status: ApiStatus) { when (status) {
         ApiStatus.LOADING -> { binding.progressBar.visibility = View.VISIBLE
