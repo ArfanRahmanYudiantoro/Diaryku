@@ -60,6 +60,7 @@ class ArtikelFragment : Fragment() {
         viewModel.scheduleUpdater(requireActivity().application)
     }
 
+    /////code loading sudah jalan tetapi tidak muncul tapi code sudah benar////
     private fun updateProgress(status: ApiStatus) {
         when (status) {
             ApiStatus.LOADING -> {

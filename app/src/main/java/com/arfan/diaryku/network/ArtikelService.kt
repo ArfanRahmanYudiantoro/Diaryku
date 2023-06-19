@@ -36,4 +36,3 @@ object ArtikelApi{
 }
 enum class ApiStatus { LOADING, SUCCESS, FAILED }
 
-

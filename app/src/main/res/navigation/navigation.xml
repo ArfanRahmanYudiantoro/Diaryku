@@ -42,5 +42,5 @@
     <fragment
         android:id="@+id/artikelFragment"
         android:name="com.arfan.diaryku.ui.tambah.artikel.ArtikelFragment"
-        android:label="ArtikelFragment" />
+        android:label="Artikel" />
 </navigation>
